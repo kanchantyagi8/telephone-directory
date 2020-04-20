@@ -1,0 +1,9 @@
+<div>
+    <p>Name: {{clickedUser.name}}</p>
+    <p>Number: {{phoneNumber ? phoneNumber : clickedUser.mobile}}</p>
+    <p>Age: {{clickedUser.age}}</p>
+    <p>Address: {{clickedUser.address}}</p>
+
+    <input [(ngModel)]="phoneNumber" maxlength="10">
+    <button (click)="updateNumber(phoneNumber)">Change Number</button>
+</div>

@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="phone-list">
+        <input [(ngModel)]="searchKeyword">
+        <ul>
+            <li *ngFor="let person of personList | filter:searchKeyword | order:'name'" (click)="onSelectData(person)">
+                <p>{{person.name}}</p>
+                <p>{{updatedNumber ? updatedNumber : person.mobile}}</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="phone-details">
+        <app-phonedetail *ngIf="isVisible === false" (numberUpdated)="getUpdatedNumber($event)" [personData]="clickedUser"></app-phonedetail>
+    </div>
+</div>

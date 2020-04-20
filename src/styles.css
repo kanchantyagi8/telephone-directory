@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+p {
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+ul {
+    padding: 0;
+    background-color: #eeeeee;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
